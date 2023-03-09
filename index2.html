@@ -1,10 +1,67 @@
-<!DOCTYPE HTML>
-<html>
-  <head>
-    <title>我是第一次就上手</title>
-  </head>
+<style>
+ #result1 {
+  background-color: red;
+  width: 100px;
+  height: 100px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+ }
+ #result2 {
+  background-color: blue;
+  width: 100px;
+  height: 100px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+ }
 
-  <body>
-    我是Body
-  </body>
-</html>
+ button{
+    width:100px;
+    geight:100px;
+    font-size:30px;
+ }
+</style>
+
+<div id='result1'>
+</div>
+
+<div id='result2'>
+</div>
+
+<div>
+<label for="x">BTS</label>
+<input type="number" name="x" id="x">
+<br>
+<label for="y">NewJeans</label>
+<input type="number" name="y" id="y">
+<br>
+<button id="btn" onclick="show()">顯示最後投票結果</button>
+<button id="cancel" onclick="cancel()">回復原始狀態</button>
+</div>
+
+<!--  這是 HTML註解 -->
+<script>
+let message = "hello";
+
+let x = "BTS<img src='https://cdn.bella.tw/index_image/3kyXnN3LcErnsdM7hDJIeBorZD838wjpzzck5ZTX.jpeg'width='70'height='70'>";
+let y = "NewJeans<img src='https://media.vogue.com.tw/photos/62f4f13cbfbf2a875b4fec28/master/w_1600%2Cc_limit/newjeans3.jpeg'width='70'height='70'>";
+
+document.querySelector("#result1").innerHTML = x;
+document.querySelector("#result2").innerHTML = y;
+
+function show() {
+let result_x = document.querySelector("#x").value;
+let result_y = document.querySelector("#y").value;
+document.querySelector("#result1").style.width = result_x + "px";
+document.querySelector("#result2").style.width = result_y + "px";
+}
+
+//這是註解
+/*
+跨行註解
+*/
+
+
+
+</script>
